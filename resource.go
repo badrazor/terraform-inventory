@@ -95,13 +95,13 @@ func (r Resource) Groups() []string {
 
 	for k, v := range r.Tags() {
 		// Valueless
-		if v == "" {
+		if v == "ansible" {
 			g := k
 			groups = append(groups, g)
 		// Key-value
-		} else {
-			g := fmt.Sprintf("%s_%s", k, v)
-			groups = append(groups, g)
+		//} else {
+		//	g := fmt.Sprintf("%s_%s", k, v)
+		//	groups = append(groups, g)
 		}
 	}
 
